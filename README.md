@@ -2,9 +2,7 @@ NAME: MUSTAPHA LAWAL DAURA
 
 REG:FCP-CSE-22-2007
 
-GITHUB:
-
-CSE403 FOLDER:
+CSE403 FOLDER:https://github.com/mustaphadra1/CSE403
 
 LINKEDIN ACC:https://www.linkedin.com/in/mustafa-lawal-15a2a229b?trk=contact-info
 
