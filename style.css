@@ -1,0 +1,229 @@
+/* TODO: Add CSS variables for colors */
+:root {
+  
+            --primary-color: #11db2c;
+            --secondary-color: #333;
+            --background-color: #070742;
+            --text-color: #f00606;
+            --highlight-color: #ff6f61;
+            --footer-bg: #0056b3;
+            --nav-bg: #041c36;
+            --hover-color: #09203a; 
+        }
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background: var(--background-color);
+    line-height: 1.6;
+}
+
+/* TODO: Style the navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--nav-bg);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--highlight-color);
+}
+
+/* TODO: Style the header */
+header {display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(to right, var(--primary-color), var(--highlight-color));
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+header button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+header button:hover {
+    background: var(--highlight-color);
+    color: white;
+}
+
+/* TODO: Style the sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+section ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+section ul li {
+    background: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section ul li:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    transition: all 0.3s;
+}
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: var(--highlight-color);
+}
+
+
+/* TODO: Style the footer */
+footer { footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--footer-bg);
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+}
+
+/* TODO: Add responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        background: var(--nav-bg);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    section ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
